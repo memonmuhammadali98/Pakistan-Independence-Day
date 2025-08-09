@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background-color: #074619;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    color: rgb(1, 12, 1) !important;
+}
+
+.navbar-toggler,
+.navbar-nav {
+    color: white !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* Navbar Ends */
+
+.hero-section {
+    background: linear-gradient(to right, #006600, #ffffff);
+    padding: 100px 0;
+    color: #000;
+    text-align: center;
+    height: 500px;
+}
+
+.hero-section h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+    #countdown {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    #message {
+      font-size: 40px;
+      color: #FFD700;
+      font-weight: bold;
+    }

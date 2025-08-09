@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Independence Day</title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Navbar Starts -->
+  <nav class="navbar navbar-expand-lg navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./Assets/logo-removebg-preview (1).png" alt="Logo" width="100px" height="80px">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto ms-auto gap-5 mb-2 mb-lg-0 f-s-5">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-disabled="true">History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-disabled="true">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-disabled="true">Stories</a>
+          </li>
+        </ul>
+        <!-- <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar Ends -->
+
+  <!-- Hero Section Starts -->
+  <!-- <section class="hero-section">
+    <h1>Countdown to 14th August</h1>
+    <div id="countdown"></div>
+    <div id="message"></div>
+
+    <div id="fireworks" class="firework-container" style="display: none;">
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+  </div>
+
+  <div id="baaja-left" class="baaja">
+    <img src="./Assets/Baja.png" alt="Baaja" width="300px">
+  </div>
+  <div id="baaja-right" class="baaja">
+    <img src="./Assets/Baja-right.png" alt="Baja" width="300px">
+  </div>
+
+  </section> -->
+  <!-- Hero Section Ends -->
+
+  <!-- About Section Starts -->
+   <!-- <section class="about-section">
+    <div class="container">
+    <h2>About Independence Day</h2>
+    <p>
+      Every year on <strong>14th August</strong>, Pakistan celebrates its Independence Day with great pride and honor. 
+      It marks the day when Pakistan became a sovereign nation in <strong> 1947</strong>. The day is a symbol of freedom, sacrifices, and the efforts of our leaders and ancestors who made this country possible.
+    </p>
+    <p>
+      We celebrate with parades, flags, lights, and unity reminding ourselves of the values of peace, hard work, and patriotism.
+    </p>
+  </div>
+   </section> -->
+
+  <script>
+  // Set the target date (14 August of current year OR test with few seconds from now)
+  var now = new Date();
+  var year = now.getFullYear();
+  
+  // For demo/testing: trigger after 5 seconds
+  var targetDate = new Date(new Date().getTime() + 5000); 
+
+  // Countdown and elements
+  var countdown = document.getElementById("countdown");
+  var message = document.getElementById("message");
+  var leftBaaja = document.getElementById("baaja-left");
+  var rightBaaja = document.getElementById("baaja-right");
+
+  var timer = setInterval(function () {
+    var currentTime = new Date().getTime();
+    var timeLeft = targetDate.getTime() - currentTime;
+
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      countdown.innerHTML = "";
+      message.innerHTML = "Happy Independence Day Pakistan!";
+      message.classList.add("message-animate");
+
+      // Show fireworks and baajas
+      document.getElementById("fireworks").style.display = "block";
+      leftBaaja.style.display = "block";
+      rightBaaja.style.display = "block";
+
+      // Slide in animation
+      leftBaaja.classList.add("slideInLeft");
+      rightBaaja.classList.add("slideInRight");
+
+      // After sliding, add continuous bounce
+      leftBaaja.addEventListener("animationend", function () {
+        leftBaaja.classList.add("bounce");
+      });
+
+      rightBaaja.addEventListener("animationend", function () {
+        rightBaaja.classList.add("bounce");
+      });
+
+    } else {
+      var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      countdown.innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>

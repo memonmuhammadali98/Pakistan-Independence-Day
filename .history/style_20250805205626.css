@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    background-color: #074619;
+    color: white !important;
+}
+
+.nav-link{
+    color: white !important;
+}
