@@ -112,10 +112,9 @@ h3 {
   font-size: 20px;
   margin-top: 15px;
   line-height: 1.6;
-  margin-bottom: 40px;
 }
 
-.hero-text .hero-btn {
+.hero-text button {
   background-color: #006600;
   border: 2px solid #003300;
   color: #ffffff;
@@ -126,10 +125,10 @@ h3 {
   border-radius: 6px;
   font-weight: bold;
   transition: all 0.3s ease;
-  text-decoration: none;
 }
-.hero-text .hero-btn:hover {
-  background-color: transparent;
+
+.hero-text button:hover {
+  background-color: #c6f6c6;
   color: #003300;
   border-color: #006600;
 }

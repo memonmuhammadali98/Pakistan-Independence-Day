@@ -112,7 +112,6 @@ h3 {
   font-size: 20px;
   margin-top: 15px;
   line-height: 1.6;
-  margin-bottom: 40px;
 }
 
 .hero-text .hero-btn {
@@ -126,8 +125,9 @@ h3 {
   border-radius: 6px;
   font-weight: bold;
   transition: all 0.3s ease;
-  text-decoration: none;
+
 }
+
 .hero-text .hero-btn:hover {
   background-color: transparent;
   color: #003300;
